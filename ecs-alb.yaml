@@ -5,10 +5,10 @@ Parameters:
     Type: String
     Description: The name of the environment to add this load balancer to
   VpcID:
-    Description: Vpc ID for the cluster 
+    Description: Vpc ID for the load balancer. Shoul be same as the one used for the cluster. 
     Type: 'AWS::EC2::VPC::Id'
   Subnets:
-    Description: Subnets for the cluster 
+    Description: Subnets for the load balancer. These should be public subnets if it's an external facing app.  
     Type: 'List<AWS::EC2::Subnet::Id>'      
 Resources:
   EcsSecurityGroupIngressFromPublicALB:
