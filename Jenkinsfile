@@ -26,7 +26,7 @@ pipeline {
                 script {
                 env.VERSION = readFile 'tagValue.txt'
                 }
-                cfnUpdate(stack:"$CFN-STACK", file:"$TEMPLATE-FILE", params: ['ECRTag':"${env.VERSION}",'ECSCluster':"$ECS-CLUSTER",'ECRAppRepoName':"$ECR-REPO",'DesiredTaskCount':"$DESIRED-TASK_COUNT",'VpcId':"$VPC-ID",'ALBListener':"$ALB-LISTENER-ARN",'Priority':"$PRIORITY",'ContainerPort':"$CONTAINER-PORT",'AppLoadBalancerName':"prod-ALB"],timeoutInMinutes:10)
+                cfnUpdate(stack:"$CFN_STACK", file:"$TEMPLATE_FILE", params: ['ECRTag':"${env.VERSION}",'ECSCluster':"$ECS_CLUSTER",'ECRAppRepoName':"$ECR_REPO",'DesiredTaskCount':"$DESIRED_TASK_COUNT",'VpcId':"$VPC_ID",'ALBListener':"$ALB_LISTENER_ARN",'Priority':"$PRIORITY",'ContainerPort':"$CONTAINER_PORT",'AppLoadBalancerName':"$LB_NAME"],timeoutInMinutes:10)
         }
         
           }
