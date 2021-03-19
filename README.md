@@ -38,6 +38,7 @@ Create the ECR repository in your AWS account that will be used to store the Doc
   2. The source for this project will be the CodeCommit repo create in step 2. 
   3. For the buildspec section, use the buildspec.yaml file from this repository. 
   4. Also, create and initialize the below environment variables 
+
     - AWS_DEFAULT_REGION 
 
     - AWS_ACCOUNT_ID
@@ -56,6 +57,7 @@ Launch an Application Load Balancer by using the file - ecs-cluster.yaml.
 
 ### 7. Create the CloudBees CI pipeline 
  1. Create a parametrized Cloud CI pipeline which requests the following parameters
+
     - CODEBUILD_PROJECT_NAME
 
     - REGION
