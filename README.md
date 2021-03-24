@@ -45,7 +45,7 @@ Create the ECR repository in your AWS account that will be used to store the Doc
 
     - IMAGE_REPO_NAME
 
-    - IMAGE-TAG 
+    - IMAGE_TAG 
 
 ### 4. Configure the CodeCommit, CodeBuild and AWS credentials in your Jenkins config 
 
